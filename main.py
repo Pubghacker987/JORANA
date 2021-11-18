@@ -61,7 +61,7 @@ HELP_BUTTONS = InlineKeyboardMarkup(
 
 ABOUT_BUTTONS = InlineKeyboardMarkup(
             [
-                [InlineKeyboardButton("📮 Feedback DeV", url="https://t.me/DKBOTZHELP")],
+                [InlineKeyboardButton("📮 Feedback DeV", url="https://www.atozcartoonist.com")],
                 [InlineKeyboardButton("🏡 Home", callback_data="home"),
                  InlineKeyboardButton("⛔ Close", callback_data="close")]
             ]
