@@ -1,4 +1,4 @@
-# (c) @Akash
+# (c) @AtoZcartoonistAdmin
 # This is very simple Telegram Videos Merge Bot.
 # Coded by a Nub.
 # Don't Laugh seeing the codes.
