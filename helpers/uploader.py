@@ -1,4 +1,4 @@
-# (c) @AbirHasan2005
+# (c) @AtoZcartoonistAdmin
 import asyncio
 import time
 from configs import Config
@@ -30,7 +30,7 @@ async def UploadVideo(bot: Client, cb: CallbackQuery, merged_vid_path: str, widt
                 ),
                 reply_markup=InlineKeyboardMarkup(
                     [[
-                         InlineKeyboardButton("👀 More Amazing Botz 🤖", url="https://t.me/DKBOTZ")]
+                         InlineKeyboardButton("👀 More Amazing Botz 🤖", url="https://t.me/AtoZcartoonistAdmin")]
                     ]
                 )
             )
@@ -49,7 +49,7 @@ async def UploadVideo(bot: Client, cb: CallbackQuery, merged_vid_path: str, widt
                 ),
                 reply_markup=InlineKeyboardMarkup(
                     [[
-                         InlineKeyboardButton("👀 More Amazing Botz 🤖", url="https://t.me/DKBOTZ")]
+                         InlineKeyboardButton("👀 More Amazing Botz 🤖", url="https://t.me/AtoZcartoonistAdmin")]
                     ]
                 )
             )
