@@ -1,4 +1,4 @@
-# (c) @AbirHasan2005
+# (c) @AtoZcartoonistAdmin
 
 from configs import Config
 from helpers.database.database import Database
