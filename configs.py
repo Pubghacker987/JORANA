@@ -1,4 +1,4 @@
-# (c) @AbirHasan2005
+# (c) @AtoZcartoonistAdmin
 
 import os
 
@@ -20,23 +20,22 @@ class Config(object):
     BOT_OWNER = int(os.environ.get("BOT_OWNER", 1445283714))
 
     START_TEXT = """
-**Hello {}, I'm a Simple Video Merger Bot!
+**Hello {}, I'm a Simple Video Merger Bot for AtoZcartoonist Site!
 I can Merge Multiple Videos into One Video, Generate ScreenShots, Generate Sample Video and many extra features....!
 
 Configure The Settings Before using meh...!
 Check Below Buttons for more..! 
 
-🤖 Developer : [ANONYMOUSE](https://t.me/DKBOTZHELP)**
+🤖 Developer : [AtoZcartoonistAdmin](https://t.me/AtoZcartoonistAdmin)**
 """
     ABOUT_TEXT = """
-**● Developed By : [This Person](https://t.me/DKBOTZHELP)
-● Updates Channel : [DK BOTZ](https://t.me/DKBOTZ)
-● Support : [DK BOTZ Support](https://t.me/DK_BOTZ)
+**● Developed By : [This Person](https://t.me/AtoZcartoonistAdmin)
+● Site : [AtoZ Cartoonist](https://www.atozcartoonist.com/)
 ● Language : [Python 3](https://www.python.org)
 ● Library : [Pyrogram](https://docs.pyrogram.org)
 ● Server : [Heroku](https://heroku.com)
 
-©️ Made By @DKBOTZ ❤️**
+©️ Made By @AtoZcartoonistAdmin ❤️**
 """
 
     HELP_TEXT = """**Hello {}, It's too easy to use me..**
@@ -51,10 +50,10 @@ Check Below Buttons for more..!
 **● If you are done with sending medias, Click "🔀 Merge Now" to merge
 ● That's it, and rest is mine work...
 
-© By @DKBOTZ ❤️**
+© By @AtoZcartoonistAdmin ❤️**
 """
     
-    CAPTION = "**__© Merged By @DKBOTZ ❤️__**"
+    CAPTION = "**__ATOZ_CARTOONIST__**"
     PROGRESS = """
 **● Percentage : {0}%**
 **● Done: {1}**
