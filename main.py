@@ -1,4 +1,4 @@
-# (c) @AbirHasan2005
+# (c) @Akash
 # This is very simple Telegram Videos Merge Bot.
 # Coded by a Nub.
 # Don't Laugh seeing the codes.
@@ -133,12 +133,12 @@ async def videos_handler(bot: Client, m: Message):
         return
     media = m.video or m.document
     if media.file_name.rsplit(".", 1)[-1].lower() not in ["mp4", "mkv", "webm"]:
-        await m.reply_text("**Sorry dude, I don't support such video formats!**\n**Send Only MP4, MKV or WEBM.**\n\n**Thank You For Using me - @DKBOTZ ❤️**", quote=True)
+        await m.reply_text("**Sorry dude, I don't support such video formats!**\n**Send Only MP4, MKV or WEBM.**\n\n**Thank You For Using me - @AtoZcartoonistAdmin❤️**", quote=True)
         return
     if QueueDB.get(m.from_user.id, None) is None:
         FormtDB.update({m.from_user.id: media.file_name.rsplit(".", 1)[-1].lower()})
     if (FormtDB.get(m.from_user.id, None) is not None) and (media.file_name.rsplit(".", 1)[-1].lower() != FormtDB.get(m.from_user.id)):
-        await m.reply_text(f"**Send another video of the same format as the earlier one 👍🏻**\n **Your File - {FormtDB.get(m.from_user.id).upper()}**\n\n**Thank You For Using me - @DKBOTZ ❤️**", quote=True)
+        await m.reply_text(f"**Send another video of the same format as the earlier one 👍🏻**\n **Your File - {FormtDB.get(m.from_user.id).upper()}**\n\n**Thank You For Using me - @AtoZcartoonistAdmin ❤️**", quote=True)
         return
     input_ = f"{Config.DOWN_PATH}/{m.from_user.id}/input.txt"
     if os.path.exists(input_):
@@ -160,7 +160,7 @@ async def videos_handler(bot: Client, m: Message):
                 FormtDB.update({m.from_user.id: media.file_name.rsplit(".", 1)[-1].lower()})
             await asyncio.sleep(Config.TIME_GAP)
             if len(QueueDB.get(m.from_user.id)) == Config.MAX_VIDEOS:
-                MessageText = "**Okay, You can merge your videos using the below Merge Now Button!**\n\n**© Made by @DKBOTZ ❤️**"
+                MessageText = "**Okay, You can merge your videos using the below Merge Now Button!**\n\n**© Made by @AtoZcartoonistAdmin ❤️**"
             markup = await MakeButtons(bot, m, QueueDB)
             await editable.edit(text="**Your Videos are Added to Queue!**")
             reply_ = await m.reply_text(
@@ -390,7 +390,7 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
                     )
                 )
             except Exception as downloadErr:
-                print(f"**😐 Failed to Download the Given File!**\n**Error: {downloadErr}**\n\n**Contact My Support Group - @DK_BOTZ**")
+                print(f"**😐 Failed to Download the Given File!**\n**Error: {downloadErr}**\n\n**Contact My Site - https://www.atozcartoonist.com**")
                 QueueDB.get(cb.from_user.id).remove(i.message_id)
                 await cb.message.edit("**File Skipped!**")
                 await asyncio.sleep(3)
@@ -446,7 +446,7 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
                 [
                     [InlineKeyboardButton("📂 Rename File", callback_data="renameFile_Yes"), 
                      InlineKeyboardButton("😐 Use Default", callback_data="renameFile_No")],
-                    [InlineKeyboardButton("💬 Join My Support Group 👥", url="https://t.me/DK_BOTZ")]
+                    [InlineKeyboardButton("💬 Join My Support Group 👥", url="https://www.atozcartoonist.com")]
                 ]
             )
         )
@@ -505,7 +505,7 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
                 user = await bot.get_chat_member(chat_id=(int(Config.UPDATES_CHANNEL) if Config.UPDATES_CHANNEL.startswith("-100") else Config.UPDATES_CHANNEL), user_id=cb.message.chat.id)
                 if user.status == "kicked":
                     await cb.message.edit(
-                        text="**Sorry Sir, You are Banned to use me. Contact my [Support Group](https://t.me/DK_BOTZ).**",
+                        text="**Sorry Sir, You are Banned to use me. Contact my [Site](https://www.atozcartoonist.com).**",
                         parse_mode="markdown",
                         disable_web_page_preview=True
                     )
@@ -528,7 +528,7 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
                 return
             except Exception:
                 await cb.message.edit(
-                    text="**Something went Wrong Dude. Contact my [Support Group](https://t.me/DK_BOTZ).**",
+                    text="**Something went Wrong Dude. Contact my [Site](https://www.atozcartoonist.com).**",
                     parse_mode="markdown",
                     disable_web_page_preview=True
                 )
@@ -592,7 +592,7 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("👀 Other Botz", url="https://t.me/DKBOTZ"),
+                        InlineKeyboardButton("👀 Other Botz", url="https://www.atozcartoonist.com"),
                         InlineKeyboardButton("😐 Close", callback_data="close")
                     ]
                 ] 
@@ -618,7 +618,7 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
         if (QueueDB.get(cb.from_user.id, None) is None) or (QueueDB.get(cb.from_user.id) == []):
             await cb.answer("Sorry, Your Queue is Empty!", show_alert=True)
             return
-        merged_vid_path = f"{Config.DOWN_PATH}/{str(cb.from_user.id)}/[@DKBOTZ]_Merged.{FormtDB.get(cb.from_user.id).lower()}"
+        merged_vid_path = f"{Config.DOWN_PATH}/{str(cb.from_user.id)}/[ATOZ_CARTOONIST]_Merged.{FormtDB.get(cb.from_user.id).lower()}"
         if cb.data.split("_", 1)[-1] == "Yes":
             await cb.message.edit("**Okay, Send me the new file name!**")
             try:
@@ -701,7 +701,7 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
             video_thumbnail=video_thumbnail,
             file_size=os.path.getsize(merged_vid_path)
         )
-        caption = f"**__© Uploaded By @DKBOTZ ❤️__**"
+        caption = f"**__© Uploaded By ATOZ_CARTOONIST__**"
         if (await db.get_generate_ss(cb.from_user.id)) is True:
             await cb.message.edit("**Now Generating Screenshots...**")
             generate_ss_dir = f"{Config.DOWN_PATH}/{str(cb.from_user.id)}"
