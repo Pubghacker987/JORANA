@@ -1,4 +1,4 @@
-# (c) @AbirHasan2005
+# (c) @AtoZcartoonistAdmin
 
 import asyncio
 from helpers.database.access_db import db
@@ -9,7 +9,7 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 async def OpenSettings(m: Message, user_id: int):
     try:
         await m.edit(
-            text="**__⚙ Configure my Behavior from here, to experience the best service 😉\n\n© @DKBOTZ ❤️__**",
+            text="**__⚙ Configure my Behavior from here, to experience the best service 😉\n\n© @AtoZcartoonistAdmin ❤️__**",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [InlineKeyboardButton(f"📤 Upload as {'Video' if (await db.get_upload_as_doc(id=user_id)) is False else 'Document'} ✅", callback_data="triggerUploadMode")],
