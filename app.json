@@ -1,15 +1,15 @@
 {
     "name": "Telegram Video Merge Bot",
-    "description": "A Telegram Video Merge Bot in Pyrogram by @AbirHasan2005",
+    "description": "A Telegram Video Merge Bot in Pyrogram by @AtoZcartoonistAdmin",
     "keywords": [
         "telegram",
         "video",
         "merge",
         "bot"
     ],
-    "repository": "https://github.com/deepukumarpuri/JORANA",
-    "website": "https://telegram.dog/Animesh941",
-    "success_url": "https://t.me/VideoMergeAVBot",
+    "repository": "/",
+    "website": "https://www.atozcartoonist.com",
+    "success_url": "/",
     "env": {
         "API_ID": {
             "description": "Get this value from my.telegram.org or @TeleORG_Bot"
@@ -61,7 +61,7 @@
     },
     "buildpacks": [ 
         {
-            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+            "url": "/"
         }, 
         { 
             "url": "heroku/python"
